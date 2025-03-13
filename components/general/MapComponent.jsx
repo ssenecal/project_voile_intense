@@ -34,7 +34,7 @@ export default function MapComponent({ locationIndex }) {
   return (
     <div className='absolute z-0'>
       <MapContainer center={position} zoom={5} style={{ height: "926px", width: "428px", position: "absolute" }}>
-        <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png" />
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <MapUpdater position={position} zoom={zoom} />
       </MapContainer>
     </div>
@@ -42,3 +42,4 @@ export default function MapComponent({ locationIndex }) {
 }
 
 // <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+//https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png
