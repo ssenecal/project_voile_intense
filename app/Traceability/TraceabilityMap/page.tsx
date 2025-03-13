@@ -1,11 +1,15 @@
 "use client";
-import React, { useState } from "react";
-import Carousel from "@/components/general/Carousel";
+import React from "react";
+import dynamic from "next/dynamic";
+
+const DynamicCarousel = dynamic(() => import("@/components/general/Carousel"), {
+  ssr: false,
+});
 
 const TraceabilityMap = () => {
   return (
     <div>
-      <Carousel />
+      <DynamicCarousel></DynamicCarousel>
     </div>
   );
 };
