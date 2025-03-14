@@ -22,7 +22,7 @@ export default function SquaredImage({ index }: DynamicComponentProps) {
   const SelectedComponent = components[index] || components[0]; // Default fallback
 
   return (
-    <div className="p-4 flex flex-col items-center">
+    <div className="p-9">
       <AnimatePresence mode="wait">
         <motion.div
           key={index} // Ensures Framer Motion recognizes changes
@@ -30,7 +30,7 @@ export default function SquaredImage({ index }: DynamicComponentProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="w-full flex justify-center"
+          className="relative h-[129px] w-[129px]"
         >
           <SelectedComponent />
         </motion.div>

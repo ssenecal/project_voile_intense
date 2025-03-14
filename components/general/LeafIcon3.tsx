@@ -3,14 +3,14 @@ import leafImg from "/public/leaf-double.svg";
 import leafImgW from "/public/leaf-double-white.png";
 import { useState } from "react";
 
-const LeafIcon = () => {
+const LeafIcon3 = () => {
   const [isHovering, setIsHovered] = useState(false);
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
 
   return (
     <div
-      className="absolute left-[180px] top-[380px] z-10"
+      className="absolute left-[180px] top-[280px] z-10"
       cursor-pointer
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -30,4 +30,4 @@ const LeafIcon = () => {
   );
 };
 
-export default LeafIcon;
+export default LeafIcon3;

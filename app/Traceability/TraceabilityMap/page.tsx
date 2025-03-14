@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import { AnimatePresence, motion } from "framer-motion";
 
 const DynamicCarousel = dynamic(() => import("@/components/general/Carousel"), {
   ssr: false,
@@ -8,9 +9,9 @@ const DynamicCarousel = dynamic(() => import("@/components/general/Carousel"), {
 
 const TraceabilityMap = () => {
   return (
-    <div>
+    <AnimatePresence mode="popLayout">
       <DynamicCarousel></DynamicCarousel>
-    </div>
+    </AnimatePresence>
   );
 };
 

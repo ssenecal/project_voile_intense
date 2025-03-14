@@ -32,12 +32,10 @@ body {
 }
 
 p {
-  font-family: Noto Sans;
+  font-family: Noto sans;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  line-height: 19px;
   letter-spacing: 0.5%;
-  text-align: center;
   color: #767676;
   ;
 }
@@ -45,7 +43,7 @@ p {
 h1 {
   font-family: Noto Sans;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 100%;
   letter-spacing: 0.2%;
   text-align: center;
@@ -53,11 +51,14 @@ h1 {
 }
 
 button {
-  font-family: Noto Sans;
+font-family: Noto Sans;
 font-weight: 500;
 font-size: 14px;
-leading-trim: Cap height;
 line-height: 36px;
 letter-spacing: 0.2%;
 text-transform: uppercase;
+}
+
+h3{
+  font-family: Noto Sans;
 }
