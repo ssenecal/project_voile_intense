@@ -32,11 +32,11 @@ const Carousel = () => {
       className="relative h-full w-full"
     >
       <div className="w-full h-full flex flex-col justify-between z-10">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between w-[428]">
           <div className="h-40 w-40 z-10">
             <SquaredImage index={currentIndex}></SquaredImage>
           </div>
-          <div className="p-2 border-[#DBDBD1] bg-white rounded-full border-1 self-end self-start mr-10 mt-10 z-10">
+          <div className="p-2 h-7 w-7 border-[#DBDBD1] bg-white rounded-full border-1 itmes-end mr-5 mt-5 z-10">
             <Link href={"/"}>
               <Image src={crossImg} className="w-3 h-3" alt="efe"></Image>
             </Link>

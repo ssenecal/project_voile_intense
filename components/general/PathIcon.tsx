@@ -2,7 +2,7 @@ import Image from "next/image";
 import glassImg from "/public/glass-svgrepo-com.svg";
 import dropImg from "/public/water-drop-drop-svgrepo-com.svg";
 import boxImg from "/public/box-minimalistic-svgrepo-com.svg";
-import leafImg from "/public/leaf-double.svg";
+import leafImg from "/public/leaf-double-white.png";
 
 const PathIcon = () => {
   return (
@@ -20,7 +20,7 @@ const PathIcon = () => {
       </div>
       <div className="absolute z-10  top-[440px] left-[290px]">
         <div className="flex justify-center">
-          <div className="p-2 bg-gray-100 border-[#DBDBD1] rounded-full border-1">
+          <div className="p-2 bg-[#BA9B53] border-[#DBDBD1] rounded-full border-1">
             <Image
               src={leafImg}
               alt="clipboard-icon"

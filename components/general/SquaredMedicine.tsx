@@ -7,7 +7,7 @@ const SquaredMedicine = () => {
       <Image
         src={mImg}
         alt="clipboard-icon"
-        className="object-cover h-[130px]"
+        className="object-cover h-[130px] object-right"
       ></Image>
     </div>
   );

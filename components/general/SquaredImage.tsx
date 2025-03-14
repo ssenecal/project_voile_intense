@@ -22,7 +22,7 @@ export default function SquaredImage({ index }: DynamicComponentProps) {
   const SelectedComponent = components[index] || components[0]; // Default fallback
 
   return (
-    <div className="p-9">
+    <div className="p-3">
       <AnimatePresence mode="wait">
         <motion.div
           key={index} // Ensures Framer Motion recognizes changes

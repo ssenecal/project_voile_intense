@@ -9,7 +9,7 @@ const GlassIcon = () => {
           <Image
             src={glassImg}
             alt="clipboard-icon"
-            className="w-7 h-7"
+            className="w-[28px] h-[28px]"
           ></Image>
         </div>
       </div>
