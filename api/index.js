@@ -1,24 +1,31 @@
-import express from "express";
-const app = express();
-const port = 3000;
+// Express + Next JS server combination - server.js
+const express = require("express");
+const next = require("next");
 const { createHash } = await import("node:crypto");
 const hash = createHash("sha256");
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-app.use(express.json());
+const server = express();
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello World !</h1>");
+server.get("/api/myapi", (req, res) => {
+  res.send("<h1>This is an API route :)</h1>");
 });
 
-app.get("/about", (req, res) => {
-  res.send("<h1>About Me.</h1>");
+server.get("*", (req, res) => {
+  return handle(req, res);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}.`);
+app.prepare().then(() => {
+  // Start listening to the Express.js Server
+  server.listen(3000, (err) => {
+    if (err) throw err;
+    console.log("Express Server running on http://localhost:3000");
+  });
 });
 
-app.post("/hashemail", function (req, res) {
+server.post("/hashemail", function (req, res) {
   console.log(req.body.email);
   if (!checkEmail(req.body.email)) {
     res.status(412).json({ error: "email not satisfactory" });
